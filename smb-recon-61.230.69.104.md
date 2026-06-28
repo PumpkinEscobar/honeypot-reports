@@ -1,4 +1,4 @@
-# Threat Hunt Report: SMB Reconnaissance from 61.230.69.104
+# Wazuh Alert Report: SMB Reconnaissance from 61.230.69.104
 
 Analyst: PumpkinEscobar |
 Sensor: Dionaea honeypot (AWS EC2) |
