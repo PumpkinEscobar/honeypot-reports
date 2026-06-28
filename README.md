@@ -1,6 +1,6 @@
-# Honeypot Reports
+# Honeypot Indicator Analysis
 
-Wazuh Alert reports generated from a personal Dionaea honeypot, written to practice and demonstrate SOC analyst tradecraft: raw source validation, IOC enrichment, MITRE ATT&CK mapping, and detection gap analysis.
+Honeypot Indicator Analysis reports generated from a personal Dionaea honeypot, written to practice and demonstrate SOC analyst tradecraft: raw source validation, IOC enrichment, MITRE ATT&CK mapping, and detection gap analysis.
 
 ## About
 
