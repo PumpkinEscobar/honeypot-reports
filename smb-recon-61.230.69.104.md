@@ -1,8 +1,8 @@
 # Threat Hunt Report: SMB Reconnaissance from 61.230.69.104
 
-Analyst: PumpkinEscobar
-Sensor: Dionaea honeypot (AWS EC2)
-Date of activity: 26 Jun 2026
+Analyst: PumpkinEscobar |
+Sensor: Dionaea honeypot (AWS EC2) |
+Date of activity: 26 Jun 2026 |
 Date of report: 28 Jun 2026
 
 ## BLUF
