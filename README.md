@@ -1,10 +1,10 @@
 # Honeypot Indicator Analysis
 
-Honeypot Indicator Analysis reports generated from a personal Dionaea honeypot, written to practice and demonstrate SOC analyst tradecraft: raw source validation, IOC enrichment, MITRE ATT&CK mapping, and detection gap analysis.
+Honeypot Indicator Analysis Dashboard & Reports generated from a personal Dionaea honeypot, written to practice and demonstrate SOC analyst tradecraft: raw source validation, IOC enrichment, MITRE ATT&CK mapping, and detection gap analysis.
 
 ## About
 
-This repo holds finished analysis from a honeypot I run in AWS. Each report starts from raw sensor data, gets enriched with open source threat intel, and ends with an assessment and concrete detection recommendations. The goal is not to collect alerts. The goal is to show I can take a hit from first contact to a decision a SOC would actually use.
+This repo holds a dashboard (/docs) and finished analysis from a honeypot I run in AWS. Each report starts from raw sensor data, gets enriched with open source threat intel, and ends with an assessment and concrete detection recommendations. The goal is not to collect alerts. The goal is to show I can take a hit from first contact to a decision a SOC would actually use.
 
 Every report follows the same structure so they read consistently and so the methodology stays repeatable.
 
