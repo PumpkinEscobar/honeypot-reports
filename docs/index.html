@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>honeylab // Dionaea honeypot telemetry</title>
+<meta name="description" content="A Dionaea honeypot sensor exposed on the public internet. Scans, probes, and brute-force attempts are captured, enriched, and mapped to MITRE ATT&amp;CK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d1620;
+    --bg-raised:#13202c;
+    --line:#223344;
+    --line-soft:#1a2937;
+    --ink:#e7eef4;
+    --ink-dim:#93a7b8;
+    --ink-faint:#5e7385;
+    --link:#46b6c4;
+    --signal:#f5a623;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  a:focus-visible,.cta:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+  /* sensor strip (signature) */
+  .strip{border-bottom:1px solid var(--line);background:var(--bg-raised)}
+  .strip .wrap{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;
+    padding-top:14px;padding-bottom:14px;
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.02em;
+    color:var(--ink-dim);
+  }
+  .status{display:inline-flex;align-items:center;gap:9px;color:var(--ink)}
+  .dot{
+    width:9px;height:9px;border-radius:50%;background:var(--signal);
+    box-shadow:0 0 0 0 rgba(245,166,35,.55);animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(245,166,35,.5)}
+    55%{box-shadow:0 0 0 7px rgba(245,166,35,0)}
+  }
+  .strip b{color:var(--ink);font-weight:600}
+  .strip .sep{color:var(--line)}
+  .strip .right{margin-left:auto;color:var(--ink-faint)}
+
+  /* hero */
+  .hero{padding:84px 0 64px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ink-faint);margin:0 0 20px;
+  }
+  h1{
+    margin:0;font-weight:700;letter-spacing:-.02em;line-height:1.02;
+    font-size:clamp(40px,8vw,76px);
+  }
+  h1 .l2{color:var(--ink-dim)}
+  .rule{width:54px;height:3px;background:var(--signal);margin:30px 0 26px}
+  .lede{max-width:60ch;font-size:clamp(17px,2.2vw,20px);color:var(--ink-dim);margin:0 0 38px}
+  .lede b{color:var(--ink);font-weight:600}
+  .cta{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:500;
+    color:var(--bg);background:var(--signal);
+    padding:14px 22px;border-radius:3px;transition:transform .12s ease,filter .12s ease;
+  }
+  .cta:hover{filter:brightness(1.06);text-decoration:none;transform:translateY(-1px)}
+  .cta .arw{font-size:17px;line-height:1}
+
+  /* context grid */
+  .grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;
+    padding:54px 0;border-top:1px solid var(--line-soft);
+  }
+  .kicker{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-faint);margin:0 0 14px;
+  }
+  .grid p{margin:0;color:var(--ink-dim);max-width:44ch}
+  .flow{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink);margin:0 0 14px;line-height:1.9}
+  .flow .node{color:var(--ink)}
+  .flow .arw{color:var(--signal);padding:0 6px}
+
+  /* coverage list */
+  .coverage{padding:54px 0;border-top:1px solid var(--line-soft)}
+  .coverage ul{
+    list-style:none;margin:18px 0 0;padding:0;
+    display:grid;grid-template-columns:1fr 1fr;gap:0 48px;
+  }
+  .coverage li{
+    font-family:"IBM Plex Mono",monospace;font-size:13.5px;color:var(--ink-dim);
+    padding:13px 0;border-bottom:1px solid var(--line-soft);display:flex;gap:14px;align-items:baseline;
+  }
+  .coverage li .n{color:var(--ink-faint);font-size:12px}
+  .coverage li b{color:var(--ink);font-weight:500}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);margin-top:30px;background:var(--bg-raised)}
+  footer .wrap{
+    padding:26px 24px;display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-faint);
+  }
+  footer .right{margin-left:auto}
+
+  @media (max-width:680px){
+    .hero{padding:56px 0 44px}
+    .grid{grid-template-columns:1fr;gap:38px;padding:44px 0}
+    .coverage ul{grid-template-columns:1fr}
+    .strip .right{margin-left:0;width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .dot{animation:none}
+    .cta:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+  <div class="strip">
+    <div class="wrap">
+      <span class="status"><span class="dot" aria-hidden="true"></span><b>ACTIVE</b></span>
+      <span class="sep">/</span>
+      <span>sensor <b>honeylab</b></span>
+      <span class="sep">/</span>
+      <span>engine <b>dionaea</b></span>
+      <span class="sep">/</span>
+      <span>watching <b>smb ftp mssql mysql sip http</b></span>
+      <span class="right">exposure: public internet</span>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Honeypot threat intelligence</p>
+      <h1>Everything that<br><span class="l2">knocks gets logged.</span></h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="lede">A Dionaea honeypot exposed on the open internet. Every scan, probe, and brute-force attempt against it is <b>captured, enriched, and mapped to MITRE ATT&amp;CK</b>, then published as a daily report.</p>
+      <a class="cta" href="daily-report.html">
+        <span>View the latest report</span><span class="arw" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid wrap">
+      <div>
+        <p class="kicker">What this is</p>
+        <p>A SOC home lab built to study real attacker behavior. The sensor runs on AWS and records unsolicited traffic off the open internet: the background noise of scanners, botnets, and opportunistic intrusion attempts.</p>
+      </div>
+      <div>
+        <p class="kicker">The pipeline</p>
+        <p class="flow"><span class="node">dionaea</span><span class="arw">&rarr;</span><span class="node">wazuh</span><span class="arw">&rarr;</span><span class="node">opensearch</span><span class="arw">&rarr;</span><span class="node">python</span></p>
+        <p>Captured events flow from the honeypot into a Wazuh SIEM, get indexed in OpenSearch, then are analyzed and rendered to a static report with Python.</p>
+      </div>
+    </section>
+
+    <section class="coverage wrap">
+      <p class="kicker">What the report covers</p>
+      <ul>
+        <li><span class="n">01</span><span>Hit volume, unique sources, <b>high-frequency offenders</b>, probable scanners</span></li>
+        <li><span class="n">02</span><span>Protocol targeting <b>breakdown</b></span></li>
+        <li><span class="n">03</span><span>Hourly attack <b>timeline</b></span></li>
+        <li><span class="n">04</span><span>Top 10 attacker IPs with <b>risk flags</b></span></li>
+        <li><span class="n">05</span><span><b>MITRE ATT&amp;CK</b> technique mapping with live counts</span></li>
+        <li><span class="n">06</span><span>Most recent raw <b>events</b></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Built by <b style="color:var(--ink);font-weight:600">PumpkinEscobar</b></span>
+      <span>Static report, regenerated on a schedule, served via GitHub Pages</span>
+      <span class="right"><a href="https://github.com/PumpkinEscobar/honeypot-reports">source &rarr; github</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
