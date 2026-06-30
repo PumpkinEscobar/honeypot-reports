@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dionaea Daily Report - 2026-06-29</title>
+<title>Dionaea Daily Report - 2026-06-30</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -64,36 +64,36 @@
 
 <h1>🍯 Dionaea Honeypot - Daily Probable Positives</h1>
 <div class="meta">
-  Window: 2026-06-28 02:27 UTC &rarr; 2026-06-29 02:27 UTC &nbsp;|&nbsp;
+  Window: 2026-06-29 01:31 UTC &rarr; 2026-06-30 01:31 UTC &nbsp;|&nbsp;
   Source: /opt/dionaea/log/dionaea.json &nbsp;|&nbsp;
-  Generated: 2026-06-29 02:27:28 UTC
+  Generated: 2026-06-30 01:31:43 UTC
 </div>
 
 <!-- METRIC ROW -->
 <div class="grid4">
   <div class="card">
     <div class="metric-label">Total connections</div>
-    <div class="metric-value">1,012</div>
+    <div class="metric-value">4,017</div>
   </div>
   <div class="card card-click" role="button" tabindex="0"
        onclick="openDrill('unique')"
        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDrill('unique')}">
     <div class="metric-label">Unique attacker IPs</div>
-    <div class="metric-value info">181</div>
+    <div class="metric-value info">139</div>
     <div class="drill-hint">inspect &rsaquo;</div>
   </div>
   <div class="card card-click" role="button" tabindex="0"
        onclick="openDrill('highfreq')"
        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDrill('highfreq')}">
     <div class="metric-label">High-freq IPs (5+ hits)</div>
-    <div class="metric-value warn">22</div>
+    <div class="metric-value warn">19</div>
     <div class="drill-hint">inspect &rsaquo;</div>
   </div>
   <div class="card card-click" role="button" tabindex="0"
        onclick="openDrill('scanners')"
        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDrill('scanners')}">
     <div class="metric-label">Probable scanners (50+ hits)</div>
-    <div class="metric-value danger">5</div>
+    <div class="metric-value danger">7</div>
     <div class="drill-hint">inspect &rsaquo;</div>
   </div>
 </div>
@@ -104,53 +104,53 @@
     <h2>Protocol targeting</h2>
     <table>
         <tr>
+          <td style="width:70px;font-size:12px;color:#666">SMB</td>
+          <td style="padding:4px 8px">
+            <div style="background:#eee;border-radius:3px;height:10px;overflow:hidden">
+              <div style="background:#A32D2D;width:100%;height:100%;border-radius:3px"></div>
+            </div>
+          </td>
+          <td style="width:40px;font-size:12px;text-align:right">3247</td>
+          <td style="width:70px;font-size:11px;color:#999;padding-left:8px">T1210</td>
+        </tr>
+        <tr>
           <td style="width:70px;font-size:12px;color:#666">HTTP</td>
           <td style="padding:4px 8px">
             <div style="background:#eee;border-radius:3px;height:10px;overflow:hidden">
-              <div style="background:#185FA5;width:100%;height:100%;border-radius:3px"></div>
+              <div style="background:#185FA5;width:20%;height:100%;border-radius:3px"></div>
             </div>
           </td>
-          <td style="width:40px;font-size:12px;text-align:right">714</td>
+          <td style="width:40px;font-size:12px;text-align:right">641</td>
           <td style="width:70px;font-size:11px;color:#999;padding-left:8px">T1190</td>
         </tr>
         <tr>
           <td style="width:70px;font-size:12px;color:#666">MySQL</td>
           <td style="padding:4px 8px">
             <div style="background:#eee;border-radius:3px;height:10px;overflow:hidden">
-              <div style="background:#3B6D11;width:20%;height:100%;border-radius:3px"></div>
+              <div style="background:#3B6D11;width:2%;height:100%;border-radius:3px"></div>
             </div>
           </td>
-          <td style="width:40px;font-size:12px;text-align:right">146</td>
+          <td style="width:40px;font-size:12px;text-align:right">81</td>
           <td style="width:70px;font-size:11px;color:#999;padding-left:8px">T1190</td>
         </tr>
         <tr>
           <td style="width:70px;font-size:12px;color:#666">MSSQL</td>
           <td style="padding:4px 8px">
             <div style="background:#eee;border-radius:3px;height:10px;overflow:hidden">
-              <div style="background:#533489;width:9%;height:100%;border-radius:3px"></div>
+              <div style="background:#533489;width:1%;height:100%;border-radius:3px"></div>
             </div>
           </td>
-          <td style="width:40px;font-size:12px;text-align:right">67</td>
+          <td style="width:40px;font-size:12px;text-align:right">43</td>
           <td style="width:70px;font-size:11px;color:#999;padding-left:8px">T1190</td>
-        </tr>
-        <tr>
-          <td style="width:70px;font-size:12px;color:#666">SMB</td>
-          <td style="padding:4px 8px">
-            <div style="background:#eee;border-radius:3px;height:10px;overflow:hidden">
-              <div style="background:#A32D2D;width:9%;height:100%;border-radius:3px"></div>
-            </div>
-          </td>
-          <td style="width:40px;font-size:12px;text-align:right">63</td>
-          <td style="width:70px;font-size:11px;color:#999;padding-left:8px">T1210</td>
         </tr>
         <tr>
           <td style="width:70px;font-size:12px;color:#666">EPMAPPER</td>
           <td style="padding:4px 8px">
             <div style="background:#eee;border-radius:3px;height:10px;overflow:hidden">
-              <div style="background:#888;width:3%;height:100%;border-radius:3px"></div>
+              <div style="background:#888;width:0%;height:100%;border-radius:3px"></div>
             </div>
           </td>
-          <td style="width:40px;font-size:12px;text-align:right">22</td>
+          <td style="width:40px;font-size:12px;text-align:right">5</td>
           <td style="width:70px;font-size:11px;color:#999;padding-left:8px">T1190</td>
         </tr></table>
   </div>
@@ -158,8 +158,8 @@
     <h2>Hourly volume (last 24h)</h2>
     <div class="timeline" id="tl"></div>
     <div style="display:flex;justify-content:space-between;font-size:10px;color:#bbb;margin-top:4px">
-      <span>03:00</span>
       <span>02:00</span>
+      <span>01:00</span>
     </div>
   </div>
 </div>
@@ -172,28 +172,40 @@
       <tr><th>IP</th><th>Risk</th><th>Hits</th><th>Protocol</th></tr>
       
         <tr>
-          <td style="font-family:monospace;font-size:12px">18.230.92.98</td>
+          <td style="font-family:monospace;font-size:12px">61.230.73.98</td>
           <td style="text-align:center;font-size:14px">🔴</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">340</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">1330</td>
+          <td style="font-size:12px;color:#555">SMB</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:12px">207.96.149.127</td>
+          <td style="text-align:center;font-size:14px">🔴</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">973</td>
+          <td style="font-size:12px;color:#555">SMB</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:12px">203.160.163.197</td>
+          <td style="text-align:center;font-size:14px">🔴</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">888</td>
+          <td style="font-size:12px;color:#555">SMB</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:12px">20.215.210.222</td>
+          <td style="text-align:center;font-size:14px">🔴</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">272</td>
           <td style="font-size:12px;color:#555">HTTP</td>
         </tr>
         <tr>
-          <td style="font-family:monospace;font-size:12px">74.248.132.130</td>
+          <td style="font-family:monospace;font-size:12px">52.231.68.47</td>
           <td style="text-align:center;font-size:14px">🔴</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">97</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">100</td>
           <td style="font-size:12px;color:#555">HTTP</td>
         </tr>
         <tr>
           <td style="font-family:monospace;font-size:12px">141.76.94.28</td>
           <td style="text-align:center;font-size:14px">🔴</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">96</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">92</td>
           <td style="font-size:12px;color:#555">HTTP</td>
-        </tr>
-        <tr>
-          <td style="font-family:monospace;font-size:12px">158.220.103.199</td>
-          <td style="text-align:center;font-size:14px">🔴</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">61</td>
-          <td style="font-size:12px;color:#555">MySQL</td>
         </tr>
         <tr>
           <td style="font-family:monospace;font-size:12px">170.0.34.95</td>
@@ -202,34 +214,22 @@
           <td style="font-size:12px;color:#555">MySQL</td>
         </tr>
         <tr>
-          <td style="font-family:monospace;font-size:12px">152.32.227.68</td>
+          <td style="font-family:monospace;font-size:12px">80.94.95.211</td>
           <td style="text-align:center;font-size:14px">🟡</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">14</td>
-          <td style="font-size:12px;color:#555">EPMAPPER</td>
-        </tr>
-        <tr>
-          <td style="font-family:monospace;font-size:12px">36.226.97.180</td>
-          <td style="text-align:center;font-size:14px">🟡</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">13</td>
-          <td style="font-size:12px;color:#555">MSSQL</td>
-        </tr>
-        <tr>
-          <td style="font-family:monospace;font-size:12px">16.58.56.214</td>
-          <td style="text-align:center;font-size:14px">🟡</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">11</td>
-          <td style="font-size:12px;color:#555">MySQL</td>
-        </tr>
-        <tr>
-          <td style="font-family:monospace;font-size:12px">164.52.24.181</td>
-          <td style="text-align:center;font-size:14px">🟡</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">10</td>
-          <td style="font-size:12px;color:#555">MSSQL</td>
-        </tr>
-        <tr>
-          <td style="font-family:monospace;font-size:12px">18.218.118.203</td>
-          <td style="text-align:center;font-size:14px">🟢</td>
-          <td style="text-align:right;font-size:12px;font-weight:600">8</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">29</td>
           <td style="font-size:12px;color:#555">HTTP</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:12px">60.168.97.245</td>
+          <td style="text-align:center;font-size:14px">🟡</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">12</td>
+          <td style="font-size:12px;color:#555">MSSQL</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:12px">3.129.187.38</td>
+          <td style="text-align:center;font-size:14px">🟢</td>
+          <td style="text-align:right;font-size:12px;font-weight:600">9</td>
+          <td style="font-size:12px;color:#555">MSSQL</td>
         </tr>
     </table>
     <div style="font-size:10px;color:#bbb;margin-top:8px">🔴 ≥50 hits &nbsp; 🟡 ≥10 hits &nbsp; 🟢 &lt;10 hits</div>
@@ -240,124 +240,124 @@
       <tr><th>Time</th><th>Src IP</th><th>Protocol</th><th>Port</th></tr>
       
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:24:38</td>
-          <td style="font-size:11px;font-family:monospace">20.169.49.44</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">01:28:32</td>
+          <td style="font-size:11px;font-family:monospace">18.140.44.23</td>
           <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
-          <td style="font-size:11px;color:#777">80</td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:24:32</td>
-          <td style="font-size:11px;font-family:monospace">93.174.93.12</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">01:28:32</td>
+          <td style="font-size:11px;font-family:monospace">18.140.44.23</td>
           <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
-          <td style="font-size:11px;color:#777">80</td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:19:24</td>
-          <td style="font-size:11px;font-family:monospace">115.73.220.226</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">01:27:09</td>
+          <td style="font-size:11px;font-family:monospace">94.206.65.94</td>
           <td><span style="background:#A32D2D22;color:#A32D2D;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">SMB</span></td>
           <td style="font-size:11px;color:#777">445</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:19:24</td>
-          <td style="font-size:11px;font-family:monospace">115.73.220.226</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">01:27:08</td>
+          <td style="font-size:11px;font-family:monospace">94.206.65.94</td>
           <td><span style="background:#A32D2D22;color:#A32D2D;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">SMB</span></td>
           <td style="font-size:11px;color:#777">445</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:15:32</td>
-          <td style="font-size:11px;font-family:monospace">198.235.24.138</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">01:14:23</td>
+          <td style="font-size:11px;font-family:monospace">146.190.211.22</td>
           <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
           <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:15:22</td>
-          <td style="font-size:11px;font-family:monospace">198.235.24.138</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:52:15</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
           <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
           <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:47</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:52:15</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:42</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:52:10</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:37</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:52:05</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:32</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:49:10</td>
+          <td style="font-size:11px;font-family:monospace">20.163.60.170</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:27</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:48:44</td>
+          <td style="font-size:11px;font-family:monospace">64.62.156.152</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:22</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:44:04</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:17</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:44:04</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:12</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:43:59</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:07</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:43:53</td>
+          <td style="font-size:11px;font-family:monospace">141.76.94.28</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:10:02</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:43:22</td>
+          <td style="font-size:11px;font-family:monospace">64.62.156.152</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:09:57</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:27:58</td>
+          <td style="font-size:11px;font-family:monospace">160.119.71.9</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">80</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:09:52</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:27:50</td>
+          <td style="font-size:11px;font-family:monospace">64.62.156.160</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:09:47</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:25:00</td>
+          <td style="font-size:11px;font-family:monospace">64.62.156.161</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
         <tr>
-          <td style="font-size:11px;color:#777;font-family:monospace">02:09:42</td>
-          <td style="font-size:11px;font-family:monospace">170.0.34.95</td>
-          <td><span style="background:#3B6D1122;color:#3B6D11;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">MySQL</span></td>
-          <td style="font-size:11px;color:#777">3306</td>
+          <td style="font-size:11px;color:#777;font-family:monospace">00:21:02</td>
+          <td style="font-size:11px;font-family:monospace">64.62.156.152</td>
+          <td><span style="background:#185FA522;color:#185FA5;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:600">HTTP</span></td>
+          <td style="font-size:11px;color:#777">443</td>
         </tr>
     </table>
   </div>
@@ -372,25 +372,25 @@
       <td style="font-family:monospace;font-size:12px">T1046</td>
       <td style="font-size:12px">Network Service Discovery</td>
       <td style="font-size:12px">Any inbound connection</td>
-      <td style="font-size:12px">1,012</td>
+      <td style="font-size:12px">4,017</td>
     </tr>
     <tr>
       <td style="font-family:monospace;font-size:12px">T1190</td>
       <td style="font-size:12px">Exploit Public-Facing Application</td>
       <td style="font-size:12px">HTTP, FTP, MySQL, MSSQL</td>
-      <td style="font-size:12px">927</td>
+      <td style="font-size:12px">765</td>
     </tr>
     <tr>
       <td style="font-family:monospace;font-size:12px">T1210</td>
       <td style="font-size:12px">Exploitation of Remote Services</td>
       <td style="font-size:12px">SMB</td>
-      <td style="font-size:12px">63</td>
+      <td style="font-size:12px">3,247</td>
     </tr>
     <tr>
       <td style="font-family:monospace;font-size:12px">T1595</td>
       <td style="font-size:12px">Active Scanning</td>
       <td style="font-size:12px">High-frequency source IPs</td>
-      <td style="font-size:12px">22 IPs</td>
+      <td style="font-size:12px">19 IPs</td>
     </tr>
   </table>
 </div>
@@ -433,7 +433,7 @@
 
 <script>
 
-const DRILL = {"unique": [{"ip": "18.230.92.98", "hits": 340, "proto": "HTTP", "first": "06-28 19:33", "last": "06-28 19:36", "risk": "high"}, {"ip": "74.248.132.130", "hits": 97, "proto": "HTTP", "first": "06-28 04:55", "last": "06-28 05:15", "risk": "high"}, {"ip": "141.76.94.28", "hits": 96, "proto": "HTTP", "first": "06-28 02:43", "last": "06-29 00:45", "risk": "high"}, {"ip": "158.220.103.199", "hits": 61, "proto": "MySQL", "first": "06-28 09:50", "last": "06-28 09:55", "risk": "high"}, {"ip": "170.0.34.95", "hits": 61, "proto": "MySQL", "first": "06-29 02:05", "last": "06-29 02:10", "risk": "high"}, {"ip": "152.32.227.68", "hits": 14, "proto": "EPMAPPER", "first": "06-28 18:14", "last": "06-28 18:39", "risk": "med"}, {"ip": "36.226.97.180", "hits": 13, "proto": "MSSQL", "first": "06-28 13:14", "last": "06-28 14:03", "risk": "med"}, {"ip": "16.58.56.214", "hits": 11, "proto": "MySQL", "first": "06-28 05:01", "last": "06-28 17:04", "risk": "med"}, {"ip": "164.52.24.181", "hits": 10, "proto": "MSSQL", "first": "06-28 05:08", "last": "06-28 05:15", "risk": "med"}, {"ip": "18.218.118.203", "hits": 8, "proto": "HTTP", "first": "06-28 07:58", "last": "06-28 22:32", "risk": "low"}, {"ip": "185.226.197.47", "hits": 8, "proto": "MSSQL", "first": "06-28 08:44", "last": "06-28 08:45", "risk": "low"}, {"ip": "152.32.204.21", "hits": 7, "proto": "HTTP", "first": "06-29 00:56", "last": "06-29 00:57", "risk": "low"}, {"ip": "3.131.220.121", "hits": 6, "proto": "MySQL", "first": "06-28 03:24", "last": "06-28 03:29", "risk": "low"}, {"ip": "66.132.195.110", "hits": 6, "proto": "HTTP", "first": "06-28 05:40", "last": "06-28 05:41", "risk": "low"}, {"ip": "66.132.172.111", "hits": 6, "proto": "HTTP", "first": "06-28 06:51", "last": "06-28 06:52", "risk": "low"}, {"ip": "3.134.216.108", "hits": 6, "proto": "SMB", "first": "06-28 08:34", "last": "06-28 08:39", "risk": "low"}, {"ip": "3.129.187.38", "hits": 6, "proto": "HTTP", "first": "06-28 18:12", "last": "06-28 18:17", "risk": "low"}, {"ip": "167.94.146.50", "hits": 6, "proto": "HTTP", "first": "06-28 23:16", "last": "06-28 23:16", "risk": "low"}, {"ip": "136.158.8.26", "hits": 5, "proto": "SMB", "first": "06-28 15:04", "last": "06-28 15:06", "risk": "low"}, {"ip": "3.141.153.201", "hits": 5, "proto": "MySQL", "first": "06-28 21:12", "last": "06-28 21:12", "risk": "low"}, {"ip": "34.58.232.63", "hits": 5, "proto": "HTTP", "first": "06-28 23:52", "last": "06-28 23:52", "risk": "low"}, {"ip": "216.180.246.188", "hits": 5, "proto": "HTTP", "first": "06-29 00:46", "last": "06-29 00:51", "risk": "low"}, {"ip": "198.235.24.138", "hits": 4, "proto": "HTTP", "first": "06-28 03:13", "last": "06-29 02:15", "risk": "low"}, {"ip": "167.71.16.251", "hits": 4, "proto": "HTTP", "first": "06-28 07:24", "last": "06-28 19:56", "risk": "low"}, {"ip": "113.28.71.9", "hits": 4, "proto": "SMB", "first": "06-28 22:35", "last": "06-28 22:37", "risk": "low"}, {"ip": "197.138.254.10", "hits": 4, "proto": "SMB", "first": "06-28 23:11", "last": "06-28 23:14", "risk": "low"}, {"ip": "103.236.94.50", "hits": 4, "proto": "HTTP", "first": "06-29 01:10", "last": "06-29 01:12", "risk": "low"}, {"ip": "93.174.93.12", "hits": 3, "proto": "HTTP", "first": "06-28 10:29", "last": "06-29 02:24", "risk": "low"}, {"ip": "47.84.141.208", "hits": 3, "proto": "HTTP", "first": "06-28 16:05", "last": "06-28 16:05", "risk": "low"}, {"ip": "205.210.31.21", "hits": 3, "proto": "SMB", "first": "06-28 21:00", "last": "06-28 21:00", "risk": "low"}, {"ip": "198.235.24.67", "hits": 3, "proto": "SMB", "first": "06-28 21:48", "last": "06-28 21:48", "risk": "low"}, {"ip": "66.132.224.91", "hits": 2, "proto": "SMB", "first": "06-28 02:39", "last": "06-28 02:39", "risk": "low"}, {"ip": "52.169.144.136", "hits": 2, "proto": "SMB", "first": "06-28 03:47", "last": "06-28 03:47", "risk": "low"}, {"ip": "45.131.102.63", "hits": 2, "proto": "HTTP", "first": "06-28 03:56", "last": "06-28 03:56", "risk": "low"}, {"ip": "3.125.168.113", "hits": 2, "proto": "HTTP", "first": "06-28 04:29", "last": "06-28 04:29", "risk": "low"}, {"ip": "45.39.13.235", "hits": 2, "proto": "HTTP", "first": "06-28 04:37", "last": "06-28 04:37", "risk": "low"}, {"ip": "20.40.218.136", "hits": 2, "proto": "MySQL", "first": "06-28 05:05", "last": "06-28 05:05", "risk": "low"}, {"ip": "172.202.117.178", "hits": 2, "proto": "EPMAPPER", "first": "06-28 05:12", "last": "06-28 05:12", "risk": "low"}, {"ip": "43.240.157.140", "hits": 2, "proto": "MSSQL", "first": "06-28 05:32", "last": "06-28 05:32", "risk": "low"}, {"ip": "91.226.96.85", "hits": 2, "proto": "SMB", "first": "06-28 06:17", "last": "06-28 06:17", "risk": "low"}, {"ip": "185.226.197.49", "hits": 2, "proto": "MSSQL", "first": "06-28 08:44", "last": "06-28 08:44", "risk": "low"}, {"ip": "93.171.178.215", "hits": 2, "proto": "SMB", "first": "06-28 08:54", "last": "06-28 08:54", "risk": "low"}, {"ip": "104.252.92.158", "hits": 2, "proto": "HTTP", "first": "06-28 08:54", "last": "06-28 08:54", "risk": "low"}, {"ip": "191.101.188.79", "hits": 2, "proto": "HTTP", "first": "06-28 09:16", "last": "06-28 09:16", "risk": "low"}, {"ip": "107.181.142.61", "hits": 2, "proto": "HTTP", "first": "06-28 10:47", "last": "06-28 10:47", "risk": "low"}, {"ip": "154.61.72.205", "hits": 2, "proto": "SMB", "first": "06-28 11:13", "last": "06-28 11:13", "risk": "low"}, {"ip": "213.74.41.106", "hits": 2, "proto": "SMB", "first": "06-28 11:17", "last": "06-28 11:17", "risk": "low"}, {"ip": "18.188.138.139", "hits": 2, "proto": "HTTP", "first": "06-28 11:47", "last": "06-28 11:50", "risk": "low"}, {"ip": "166.88.110.178", "hits": 2, "proto": "HTTP", "first": "06-28 11:57", "last": "06-28 11:57", "risk": "low"}, {"ip": "151.242.30.224", "hits": 2, "proto": "HTTP", "first": "06-28 12:02", "last": "06-28 21:14", "risk": "low"}, {"ip": "20.65.193.79", "hits": 2, "proto": "MySQL", "first": "06-28 12:32", "last": "06-28 12:32", "risk": "low"}, {"ip": "36.75.237.170", "hits": 2, "proto": "MSSQL", "first": "06-28 12:49", "last": "06-28 12:49", "risk": "low"}, {"ip": "91.92.41.151", "hits": 2, "proto": "HTTP", "first": "06-28 13:32", "last": "06-28 13:32", "risk": "low"}, {"ip": "46.203.196.9", "hits": 2, "proto": "HTTP", "first": "06-28 13:36", "last": "06-28 13:37", "risk": "low"}, {"ip": "35.167.108.113", "hits": 2, "proto": "HTTP", "first": "06-28 14:17", "last": "06-28 14:17", "risk": "low"}, {"ip": "59.149.239.94", "hits": 2, "proto": "SMB", "first": "06-28 14:31", "last": "06-28 14:31", "risk": "low"}, {"ip": "165.227.100.8", "hits": 2, "proto": "HTTP", "first": "06-28 14:52", "last": "06-28 14:52", "risk": "low"}, {"ip": "151.3.164.136", "hits": 2, "proto": "SMB", "first": "06-28 15:09", "last": "06-28 15:09", "risk": "low"}, {"ip": "20.14.75.2", "hits": 2, "proto": "MySQL", "first": "06-28 16:20", "last": "06-28 21:15", "risk": "low"}, {"ip": "121.197.14.82", "hits": 2, "proto": "SMB", "first": "06-28 16:31", "last": "06-28 16:31", "risk": "low"}, {"ip": "209.242.203.54", "hits": 2, "proto": "HTTP", "first": "06-28 16:47", "last": "06-28 16:47", "risk": "low"}, {"ip": "185.135.10.204", "hits": 2, "proto": "HTTP", "first": "06-28 17:07", "last": "06-28 17:07", "risk": "low"}, {"ip": "143.244.181.68", "hits": 2, "proto": "HTTP", "first": "06-28 18:54", "last": "06-28 18:54", "risk": "low"}, {"ip": "38.225.15.167", "hits": 2, "proto": "HTTP", "first": "06-28 19:00", "last": "06-28 19:00", "risk": "low"}, {"ip": "15.156.110.125", "hits": 2, "proto": "HTTP", "first": "06-28 19:09", "last": "06-28 19:09", "risk": "low"}, {"ip": "140.99.201.224", "hits": 2, "proto": "HTTP", "first": "06-28 19:37", "last": "06-28 19:37", "risk": "low"}, {"ip": "198.235.24.185", "hits": 2, "proto": "HTTP", "first": "06-28 19:48", "last": "06-28 19:48", "risk": "low"}, {"ip": "195.96.139.90", "hits": 2, "proto": "MSSQL", "first": "06-28 20:08", "last": "06-28 20:09", "risk": "low"}, {"ip": "61.169.202.234", "hits": 2, "proto": "SMB", "first": "06-28 20:10", "last": "06-28 20:10", "risk": "low"}, {"ip": "80.96.70.119", "hits": 2, "proto": "HTTP", "first": "06-28 21:31", "last": "06-28 21:31", "risk": "low"}, {"ip": "113.177.112.136", "hits": 2, "proto": "SMB", "first": "06-28 22:15", "last": "06-28 22:15", "risk": "low"}, {"ip": "3.227.192.235", "hits": 2, "proto": "HTTP", "first": "06-28 23:15", "last": "06-28 23:15", "risk": "low"}, {"ip": "104.238.9.237", "hits": 2, "proto": "HTTP", "first": "06-28 23:59", "last": "06-28 23:59", "risk": "low"}, {"ip": "104.252.28.177", "hits": 2, "proto": "HTTP", "first": "06-29 00:20", "last": "06-29 00:20", "risk": "low"}, {"ip": "187.251.242.255", "hits": 2, "proto": "SMB", "first": "06-29 00:43", "last": "06-29 00:43", "risk": "low"}, {"ip": "131.255.152.2", "hits": 2, "proto": "SMB", "first": "06-29 00:47", "last": "06-29 00:47", "risk": "low"}, {"ip": "82.23.235.143", "hits": 2, "proto": "HTTP", "first": "06-29 00:48", "last": "06-29 00:48", "risk": "low"}, {"ip": "201.93.161.154", "hits": 2, "proto": "SMB", "first": "06-29 02:07", "last": "06-29 02:07", "risk": "low"}, {"ip": "115.73.220.226", "hits": 2, "proto": "SMB", "first": "06-29 02:19", "last": "06-29 02:19", "risk": "low"}, {"ip": "87.236.176.35", "hits": 1, "proto": "HTTP", "first": "06-28 03:01", "last": "06-28 03:01", "risk": "low"}, {"ip": "195.96.139.11", "hits": 1, "proto": "HTTP", "first": "06-28 03:01", "last": "06-28 03:01", "risk": "low"}, {"ip": "185.247.137.36", "hits": 1, "proto": "HTTP", "first": "06-28 03:02", "last": "06-28 03:02", "risk": "low"}, {"ip": "195.96.139.23", "hits": 1, "proto": "HTTP", "first": "06-28 03:03", "last": "06-28 03:03", "risk": "low"}, {"ip": "87.236.176.37", "hits": 1, "proto": "HTTP", "first": "06-28 03:04", "last": "06-28 03:04", "risk": "low"}, {"ip": "185.247.137.14", "hits": 1, "proto": "HTTP", "first": "06-28 03:04", "last": "06-28 03:04", "risk": "low"}, {"ip": "87.236.176.31", "hits": 1, "proto": "HTTP", "first": "06-28 03:05", "last": "06-28 03:05", "risk": "low"}, {"ip": "195.96.139.12", "hits": 1, "proto": "HTTP", "first": "06-28 03:05", "last": "06-28 03:05", "risk": "low"}, {"ip": "185.247.137.23", "hits": 1, "proto": "HTTP", "first": "06-28 03:06", "last": "06-28 03:06", "risk": "low"}, {"ip": "185.247.137.34", "hits": 1, "proto": "HTTP", "first": "06-28 03:07", "last": "06-28 03:07", "risk": "low"}, {"ip": "87.236.176.4", "hits": 1, "proto": "HTTP", "first": "06-28 03:07", "last": "06-28 03:07", "risk": "low"}, {"ip": "198.235.24.156", "hits": 1, "proto": "HTTP", "first": "06-28 03:32", "last": "06-28 03:32", "risk": "low"}, {"ip": "205.210.31.31", "hits": 1, "proto": "EPMAPPER", "first": "06-28 03:57", "last": "06-28 03:57", "risk": "low"}, {"ip": "20.83.150.53", "hits": 1, "proto": "HTTP", "first": "06-28 04:02", "last": "06-28 04:02", "risk": "low"}, {"ip": "41.38.72.211", "hits": 1, "proto": "MSSQL", "first": "06-28 04:03", "last": "06-28 04:03", "risk": "low"}, {"ip": "195.96.139.77", "hits": 1, "proto": "MySQL", "first": "06-28 04:04", "last": "06-28 04:04", "risk": "low"}, {"ip": "104.248.160.105", "hits": 1, "proto": "HTTP", "first": "06-28 04:26", "last": "06-28 04:26", "risk": "low"}, {"ip": "178.91.136.5", "hits": 1, "proto": "MSSQL", "first": "06-28 04:36", "last": "06-28 04:36", "risk": "low"}, {"ip": "202.61.243.43", "hits": 1, "proto": "HTTP", "first": "06-28 04:37", "last": "06-28 04:37", "risk": "low"}, {"ip": "190.115.5.17", "hits": 1, "proto": "MSSQL", "first": "06-28 04:39", "last": "06-28 04:39", "risk": "low"}, {"ip": "223.244.24.1", "hits": 1, "proto": "MSSQL", "first": "06-28 05:12", "last": "06-28 05:12", "risk": "low"}, {"ip": "20.106.168.113", "hits": 1, "proto": "MSSQL", "first": "06-28 05:39", "last": "06-28 05:39", "risk": "low"}, {"ip": "198.235.24.155", "hits": 1, "proto": "HTTP", "first": "06-28 06:42", "last": "06-28 06:42", "risk": "low"}, {"ip": "172.105.103.247", "hits": 1, "proto": "HTTP", "first": "06-28 07:11", "last": "06-28 07:11", "risk": "low"}, {"ip": "135.237.126.203", "hits": 1, "proto": "HTTP", "first": "06-28 07:29", "last": "06-28 07:29", "risk": "low"}, {"ip": "91.230.168.55", "hits": 1, "proto": "EPMAPPER", "first": "06-28 07:31", "last": "06-28 07:31", "risk": "low"}, {"ip": "91.230.168.48", "hits": 1, "proto": "EPMAPPER", "first": "06-28 07:31", "last": "06-28 07:31", "risk": "low"}, {"ip": "146.190.211.22", "hits": 1, "proto": "HTTP", "first": "06-28 07:46", "last": "06-28 07:46", "risk": "low"}, {"ip": "80.69.55.177", "hits": 1, "proto": "MSSQL", "first": "06-28 07:54", "last": "06-28 07:54", "risk": "low"}, {"ip": "20.65.193.203", "hits": 1, "proto": "HTTP", "first": "06-28 08:07", "last": "06-28 08:07", "risk": "low"}, {"ip": "185.226.197.48", "hits": 1, "proto": "MSSQL", "first": "06-28 08:45", "last": "06-28 08:45", "risk": "low"}, {"ip": "185.226.197.50", "hits": 1, "proto": "MSSQL", "first": "06-28 08:45", "last": "06-28 08:45", "risk": "low"}, {"ip": "91.231.89.52", "hits": 1, "proto": "HTTP", "first": "06-28 08:48", "last": "06-28 08:48", "risk": "low"}, {"ip": "91.231.89.49", "hits": 1, "proto": "HTTP", "first": "06-28 08:48", "last": "06-28 08:48", "risk": "low"}, {"ip": "45.156.129.54", "hits": 1, "proto": "HTTP", "first": "06-28 08:50", "last": "06-28 08:50", "risk": "low"}, {"ip": "45.156.129.131", "hits": 1, "proto": "HTTP", "first": "06-28 08:50", "last": "06-28 08:50", "risk": "low"}, {"ip": "91.196.152.198", "hits": 1, "proto": "HTTP", "first": "06-28 08:51", "last": "06-28 08:51", "risk": "low"}, {"ip": "13.55.220.154", "hits": 1, "proto": "HTTP", "first": "06-28 09:05", "last": "06-28 09:05", "risk": "low"}, {"ip": "212.127.90.201", "hits": 1, "proto": "HTTP", "first": "06-28 09:17", "last": "06-28 09:17", "risk": "low"}, {"ip": "216.180.246.160", "hits": 1, "proto": "HTTP", "first": "06-28 09:39", "last": "06-28 09:39", "risk": "low"}, {"ip": "20.65.194.40", "hits": 1, "proto": "HTTP", "first": "06-28 10:24", "last": "06-28 10:24", "risk": "low"}, {"ip": "177.92.66.84", "hits": 1, "proto": "HTTP", "first": "06-28 10:26", "last": "06-28 10:26", "risk": "low"}, {"ip": "18.135.247.138", "hits": 1, "proto": "HTTP", "first": "06-28 11:02", "last": "06-28 11:02", "risk": "low"}, {"ip": "193.233.74.227", "hits": 1, "proto": "HTTP", "first": "06-28 11:11", "last": "06-28 11:11", "risk": "low"}, {"ip": "172.104.105.194", "hits": 1, "proto": "HTTP", "first": "06-28 11:24", "last": "06-28 11:24", "risk": "low"}, {"ip": "66.132.195.124", "hits": 1, "proto": "MSSQL", "first": "06-28 13:45", "last": "06-28 13:45", "risk": "low"}, {"ip": "66.132.195.123", "hits": 1, "proto": "MySQL", "first": "06-28 13:49", "last": "06-28 13:49", "risk": "low"}, {"ip": "64.62.156.212", "hits": 1, "proto": "HTTP", "first": "06-28 13:58", "last": "06-28 13:58", "risk": "low"}, {"ip": "185.150.113.28", "hits": 1, "proto": "HTTP", "first": "06-28 13:58", "last": "06-28 13:58", "risk": "low"}, {"ip": "146.247.232.46", "hits": 1, "proto": "HTTP", "first": "06-28 13:58", "last": "06-28 13:58", "risk": "low"}, {"ip": "176.74.197.77", "hits": 1, "proto": "HTTP", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "159.253.221.218", "hits": 1, "proto": "MSSQL", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "93.158.90.242", "hits": 1, "proto": "MSSQL", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "178.73.249.104", "hits": 1, "proto": "MSSQL", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "194.132.61.195", "hits": 1, "proto": "MySQL", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "178.73.251.49", "hits": 1, "proto": "MySQL", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "194.132.112.186", "hits": 1, "proto": "MySQL", "first": "06-28 13:59", "last": "06-28 13:59", "risk": "low"}, {"ip": "196.202.19.226", "hits": 1, "proto": "MSSQL", "first": "06-28 14:01", "last": "06-28 14:01", "risk": "low"}, {"ip": "167.86.80.37", "hits": 1, "proto": "HTTP", "first": "06-28 14:04", "last": "06-28 14:04", "risk": "low"}, {"ip": "163.10.17.150", "hits": 1, "proto": "HTTP", "first": "06-28 14:37", "last": "06-28 14:37", "risk": "low"}, {"ip": "20.118.224.96", "hits": 1, "proto": "HTTP", "first": "06-28 14:54", "last": "06-28 14:54", "risk": "low"}, {"ip": "182.151.52.134", "hits": 1, "proto": "MSSQL", "first": "06-28 15:02", "last": "06-28 15:02", "risk": "low"}, {"ip": "198.235.24.123", "hits": 1, "proto": "MSSQL", "first": "06-28 15:13", "last": "06-28 15:13", "risk": "low"}, {"ip": "152.53.208.128", "hits": 1, "proto": "HTTP", "first": "06-28 15:22", "last": "06-28 15:22", "risk": "low"}, {"ip": "167.94.146.58", "hits": 1, "proto": "EPMAPPER", "first": "06-28 15:40", "last": "06-28 15:40", "risk": "low"}, {"ip": "154.146.242.43", "hits": 1, "proto": "MSSQL", "first": "06-28 15:54", "last": "06-28 15:54", "risk": "low"}, {"ip": "205.210.31.93", "hits": 1, "proto": "HTTP", "first": "06-28 16:28", "last": "06-28 16:28", "risk": "low"}, {"ip": "66.240.205.34", "hits": 1, "proto": "HTTP", "first": "06-28 16:41", "last": "06-28 16:41", "risk": "low"}, {"ip": "20.168.120.208", "hits": 1, "proto": "HTTP", "first": "06-28 16:43", "last": "06-28 16:43", "risk": "low"}, {"ip": "152.42.252.134", "hits": 1, "proto": "HTTP", "first": "06-28 16:58", "last": "06-28 16:58", "risk": "low"}, {"ip": "125.20.210.182", "hits": 1, "proto": "HTTP", "first": "06-28 17:35", "last": "06-28 17:35", "risk": "low"}, {"ip": "20.168.7.42", "hits": 1, "proto": "MSSQL", "first": "06-28 17:52", "last": "06-28 17:52", "risk": "low"}, {"ip": "77.228.189.88", "hits": 1, "proto": "SMB", "first": "06-28 18:05", "last": "06-28 18:05", "risk": "low"}, {"ip": "5.189.158.177", "hits": 1, "proto": "HTTP", "first": "06-28 18:24", "last": "06-28 18:24", "risk": "low"}, {"ip": "15.235.5.241", "hits": 1, "proto": "MSSQL", "first": "06-28 18:37", "last": "06-28 18:37", "risk": "low"}, {"ip": "20.65.194.66", "hits": 1, "proto": "HTTP", "first": "06-28 19:40", "last": "06-28 19:40", "risk": "low"}, {"ip": "199.45.155.98", "hits": 1, "proto": "MSSQL", "first": "06-28 20:22", "last": "06-28 20:22", "risk": "low"}, {"ip": "13.89.124.223", "hits": 1, "proto": "HTTP", "first": "06-28 20:30", "last": "06-28 20:30", "risk": "low"}, {"ip": "20.65.193.78", "hits": 1, "proto": "HTTP", "first": "06-28 20:32", "last": "06-28 20:32", "risk": "low"}, {"ip": "205.210.31.23", "hits": 1, "proto": "HTTP", "first": "06-28 21:02", "last": "06-28 21:02", "risk": "low"}, {"ip": "27.118.25.248", "hits": 1, "proto": "MSSQL", "first": "06-28 21:39", "last": "06-28 21:39", "risk": "low"}, {"ip": "183.56.207.190", "hits": 1, "proto": "MSSQL", "first": "06-28 22:00", "last": "06-28 22:00", "risk": "low"}, {"ip": "68.183.193.242", "hits": 1, "proto": "HTTP", "first": "06-28 22:10", "last": "06-28 22:10", "risk": "low"}, {"ip": "41.75.114.30", "hits": 1, "proto": "HTTP", "first": "06-28 22:34", "last": "06-28 22:34", "risk": "low"}, {"ip": "34.77.86.45", "hits": 1, "proto": "SMB", "first": "06-28 23:06", "last": "06-28 23:06", "risk": "low"}, {"ip": "14.241.229.29", "hits": 1, "proto": "SMB", "first": "06-28 23:43", "last": "06-28 23:43", "risk": "low"}, {"ip": "20.65.193.170", "hits": 1, "proto": "HTTP", "first": "06-28 23:45", "last": "06-28 23:45", "risk": "low"}, {"ip": "35.216.254.237", "hits": 1, "proto": "SMB", "first": "06-28 23:46", "last": "06-28 23:46", "risk": "low"}, {"ip": "61.160.122.234", "hits": 1, "proto": "MSSQL", "first": "06-28 23:47", "last": "06-28 23:47", "risk": "low"}, {"ip": "198.235.24.136", "hits": 1, "proto": "HTTP", "first": "06-29 00:05", "last": "06-29 00:05", "risk": "low"}, {"ip": "205.210.31.253", "hits": 1, "proto": "MySQL", "first": "06-29 00:31", "last": "06-29 00:31", "risk": "low"}, {"ip": "20.221.71.226", "hits": 1, "proto": "HTTP", "first": "06-29 00:34", "last": "06-29 00:34", "risk": "low"}, {"ip": "43.98.205.125", "hits": 1, "proto": "HTTP", "first": "06-29 00:41", "last": "06-29 00:41", "risk": "low"}, {"ip": "20.65.193.177", "hits": 1, "proto": "HTTP", "first": "06-29 00:59", "last": "06-29 00:59", "risk": "low"}, {"ip": "217.60.241.46", "hits": 1, "proto": "HTTP", "first": "06-29 01:05", "last": "06-29 01:05", "risk": "low"}, {"ip": "34.230.221.101", "hits": 1, "proto": "HTTP", "first": "06-29 01:19", "last": "06-29 01:19", "risk": "low"}, {"ip": "198.235.24.58", "hits": 1, "proto": "EPMAPPER", "first": "06-29 01:19", "last": "06-29 01:19", "risk": "low"}, {"ip": "185.180.141.37", "hits": 1, "proto": "SMB", "first": "06-29 01:26", "last": "06-29 01:26", "risk": "low"}, {"ip": "160.119.71.9", "hits": 1, "proto": "HTTP", "first": "06-29 01:34", "last": "06-29 01:34", "risk": "low"}, {"ip": "184.105.139.67", "hits": 1, "proto": "HTTP", "first": "06-29 01:41", "last": "06-29 01:41", "risk": "low"}, {"ip": "34.176.43.235", "hits": 1, "proto": "HTTP", "first": "06-29 01:43", "last": "06-29 01:43", "risk": "low"}, {"ip": "20.169.49.44", "hits": 1, "proto": "HTTP", "first": "06-29 02:24", "last": "06-29 02:24", "risk": "low"}], "highfreq": [{"ip": "18.230.92.98", "hits": 340, "proto": "HTTP", "first": "06-28 19:33", "last": "06-28 19:36", "risk": "high"}, {"ip": "74.248.132.130", "hits": 97, "proto": "HTTP", "first": "06-28 04:55", "last": "06-28 05:15", "risk": "high"}, {"ip": "141.76.94.28", "hits": 96, "proto": "HTTP", "first": "06-28 02:43", "last": "06-29 00:45", "risk": "high"}, {"ip": "158.220.103.199", "hits": 61, "proto": "MySQL", "first": "06-28 09:50", "last": "06-28 09:55", "risk": "high"}, {"ip": "170.0.34.95", "hits": 61, "proto": "MySQL", "first": "06-29 02:05", "last": "06-29 02:10", "risk": "high"}, {"ip": "152.32.227.68", "hits": 14, "proto": "EPMAPPER", "first": "06-28 18:14", "last": "06-28 18:39", "risk": "med"}, {"ip": "36.226.97.180", "hits": 13, "proto": "MSSQL", "first": "06-28 13:14", "last": "06-28 14:03", "risk": "med"}, {"ip": "16.58.56.214", "hits": 11, "proto": "MySQL", "first": "06-28 05:01", "last": "06-28 17:04", "risk": "med"}, {"ip": "164.52.24.181", "hits": 10, "proto": "MSSQL", "first": "06-28 05:08", "last": "06-28 05:15", "risk": "med"}, {"ip": "18.218.118.203", "hits": 8, "proto": "HTTP", "first": "06-28 07:58", "last": "06-28 22:32", "risk": "low"}, {"ip": "185.226.197.47", "hits": 8, "proto": "MSSQL", "first": "06-28 08:44", "last": "06-28 08:45", "risk": "low"}, {"ip": "152.32.204.21", "hits": 7, "proto": "HTTP", "first": "06-29 00:56", "last": "06-29 00:57", "risk": "low"}, {"ip": "3.131.220.121", "hits": 6, "proto": "MySQL", "first": "06-28 03:24", "last": "06-28 03:29", "risk": "low"}, {"ip": "66.132.195.110", "hits": 6, "proto": "HTTP", "first": "06-28 05:40", "last": "06-28 05:41", "risk": "low"}, {"ip": "66.132.172.111", "hits": 6, "proto": "HTTP", "first": "06-28 06:51", "last": "06-28 06:52", "risk": "low"}, {"ip": "3.134.216.108", "hits": 6, "proto": "SMB", "first": "06-28 08:34", "last": "06-28 08:39", "risk": "low"}, {"ip": "3.129.187.38", "hits": 6, "proto": "HTTP", "first": "06-28 18:12", "last": "06-28 18:17", "risk": "low"}, {"ip": "167.94.146.50", "hits": 6, "proto": "HTTP", "first": "06-28 23:16", "last": "06-28 23:16", "risk": "low"}, {"ip": "136.158.8.26", "hits": 5, "proto": "SMB", "first": "06-28 15:04", "last": "06-28 15:06", "risk": "low"}, {"ip": "3.141.153.201", "hits": 5, "proto": "MySQL", "first": "06-28 21:12", "last": "06-28 21:12", "risk": "low"}, {"ip": "34.58.232.63", "hits": 5, "proto": "HTTP", "first": "06-28 23:52", "last": "06-28 23:52", "risk": "low"}, {"ip": "216.180.246.188", "hits": 5, "proto": "HTTP", "first": "06-29 00:46", "last": "06-29 00:51", "risk": "low"}], "scanners": [{"ip": "18.230.92.98", "hits": 340, "proto": "HTTP", "first": "06-28 19:33", "last": "06-28 19:36", "risk": "high"}, {"ip": "74.248.132.130", "hits": 97, "proto": "HTTP", "first": "06-28 04:55", "last": "06-28 05:15", "risk": "high"}, {"ip": "141.76.94.28", "hits": 96, "proto": "HTTP", "first": "06-28 02:43", "last": "06-29 00:45", "risk": "high"}, {"ip": "158.220.103.199", "hits": 61, "proto": "MySQL", "first": "06-28 09:50", "last": "06-28 09:55", "risk": "high"}, {"ip": "170.0.34.95", "hits": 61, "proto": "MySQL", "first": "06-29 02:05", "last": "06-29 02:10", "risk": "high"}]};
+const DRILL = {"unique": [{"ip": "61.230.73.98", "hits": 1330, "proto": "SMB", "first": "06-29 04:55", "last": "06-29 05:09", "risk": "high"}, {"ip": "207.96.149.127", "hits": 973, "proto": "SMB", "first": "06-29 19:18", "last": "06-29 19:20", "risk": "high"}, {"ip": "203.160.163.197", "hits": 888, "proto": "SMB", "first": "06-29 08:43", "last": "06-29 08:59", "risk": "high"}, {"ip": "20.215.210.222", "hits": 272, "proto": "HTTP", "first": "06-29 11:52", "last": "06-29 12:28", "risk": "high"}, {"ip": "52.231.68.47", "hits": 100, "proto": "HTTP", "first": "06-29 13:18", "last": "06-29 13:26", "risk": "high"}, {"ip": "141.76.94.28", "hits": 92, "proto": "HTTP", "first": "06-29 02:46", "last": "06-30 00:52", "risk": "high"}, {"ip": "170.0.34.95", "hits": 61, "proto": "MySQL", "first": "06-29 02:05", "last": "06-29 02:10", "risk": "high"}, {"ip": "80.94.95.211", "hits": 29, "proto": "HTTP", "first": "06-29 09:12", "last": "06-29 09:12", "risk": "med"}, {"ip": "60.168.97.245", "hits": 12, "proto": "MSSQL", "first": "06-29 21:24", "last": "06-29 21:24", "risk": "med"}, {"ip": "3.129.187.38", "hits": 9, "proto": "MSSQL", "first": "06-29 18:01", "last": "06-29 18:38", "risk": "low"}, {"ip": "103.101.233.18", "hits": 7, "proto": "SMB", "first": "06-29 18:08", "last": "06-29 18:15", "risk": "low"}, {"ip": "59.36.162.153", "hits": 7, "proto": "MySQL", "first": "06-29 22:55", "last": "06-29 22:55", "risk": "low"}, {"ip": "66.132.195.33", "hits": 6, "proto": "HTTP", "first": "06-29 05:56", "last": "06-29 05:58", "risk": "low"}, {"ip": "3.132.26.232", "hits": 6, "proto": "SMB", "first": "06-29 07:23", "last": "06-29 07:28", "risk": "low"}, {"ip": "66.132.195.105", "hits": 6, "proto": "HTTP", "first": "06-29 11:49", "last": "06-29 11:49", "risk": "low"}, {"ip": "3.131.220.121", "hits": 6, "proto": "HTTP", "first": "06-29 18:50", "last": "06-29 18:53", "risk": "low"}, {"ip": "184.105.139.68", "hits": 5, "proto": "HTTP", "first": "06-29 03:25", "last": "06-29 04:00", "risk": "low"}, {"ip": "18.189.28.87", "hits": 5, "proto": "EPMAPPER", "first": "06-29 13:22", "last": "06-29 13:22", "risk": "low"}, {"ip": "209.141.9.242", "hits": 5, "proto": "SMB", "first": "06-29 23:33", "last": "06-29 23:36", "risk": "low"}, {"ip": "93.174.93.12", "hits": 4, "proto": "HTTP", "first": "06-29 02:24", "last": "06-29 19:06", "risk": "low"}, {"ip": "82.140.194.51", "hits": 4, "proto": "SMB", "first": "06-29 06:50", "last": "06-29 06:52", "risk": "low"}, {"ip": "180.253.177.215", "hits": 4, "proto": "SMB", "first": "06-29 06:53", "last": "06-29 06:56", "risk": "low"}, {"ip": "84.204.143.14", "hits": 4, "proto": "SMB", "first": "06-29 07:11", "last": "06-29 07:13", "risk": "low"}, {"ip": "167.71.16.251", "hits": 4, "proto": "HTTP", "first": "06-29 07:56", "last": "06-29 19:57", "risk": "low"}, {"ip": "64.62.156.152", "hits": 4, "proto": "HTTP", "first": "06-30 00:13", "last": "06-30 00:48", "risk": "low"}, {"ip": "160.119.71.9", "hits": 3, "proto": "HTTP", "first": "06-29 01:34", "last": "06-30 00:27", "risk": "low"}, {"ip": "47.76.174.67", "hits": 3, "proto": "HTTP", "first": "06-29 02:41", "last": "06-29 02:41", "risk": "low"}, {"ip": "47.76.83.169", "hits": 3, "proto": "HTTP", "first": "06-29 02:41", "last": "06-29 02:41", "risk": "low"}, {"ip": "20.64.106.222", "hits": 3, "proto": "SMB", "first": "06-29 05:45", "last": "06-29 05:45", "risk": "low"}, {"ip": "40.124.183.177", "hits": 3, "proto": "SMB", "first": "06-29 11:20", "last": "06-29 11:20", "risk": "low"}, {"ip": "44.254.236.97", "hits": 3, "proto": "MSSQL", "first": "06-29 21:04", "last": "06-29 21:04", "risk": "low"}, {"ip": "198.235.24.165", "hits": 3, "proto": "SMB", "first": "06-29 21:20", "last": "06-29 21:20", "risk": "low"}, {"ip": "185.242.3.110", "hits": 3, "proto": "HTTP", "first": "06-29 23:13", "last": "06-30 00:02", "risk": "low"}, {"ip": "97.74.230.245", "hits": 3, "proto": "HTTP", "first": "06-29 23:54", "last": "06-29 23:54", "risk": "low"}, {"ip": "201.93.161.154", "hits": 2, "proto": "SMB", "first": "06-29 02:07", "last": "06-29 02:07", "risk": "low"}, {"ip": "198.235.24.138", "hits": 2, "proto": "HTTP", "first": "06-29 02:15", "last": "06-29 02:15", "risk": "low"}, {"ip": "115.73.220.226", "hits": 2, "proto": "SMB", "first": "06-29 02:19", "last": "06-29 02:19", "risk": "low"}, {"ip": "162.215.135.80", "hits": 2, "proto": "SMB", "first": "06-29 02:37", "last": "06-29 02:37", "risk": "low"}, {"ip": "165.227.40.200", "hits": 2, "proto": "MySQL", "first": "06-29 02:50", "last": "06-29 02:50", "risk": "low"}, {"ip": "64.23.169.92", "hits": 2, "proto": "HTTP", "first": "06-29 02:57", "last": "06-29 02:57", "risk": "low"}, {"ip": "172.102.223.232", "hits": 2, "proto": "HTTP", "first": "06-29 03:03", "last": "06-29 03:03", "risk": "low"}, {"ip": "66.132.172.44", "hits": 2, "proto": "SMB", "first": "06-29 03:42", "last": "06-29 03:42", "risk": "low"}, {"ip": "104.253.90.78", "hits": 2, "proto": "HTTP", "first": "06-29 06:22", "last": "06-29 06:22", "risk": "low"}, {"ip": "140.99.201.240", "hits": 2, "proto": "HTTP", "first": "06-29 06:41", "last": "06-29 06:41", "risk": "low"}, {"ip": "41.38.31.34", "hits": 2, "proto": "SMB", "first": "06-29 06:41", "last": "06-29 06:41", "risk": "low"}, {"ip": "159.89.232.74", "hits": 2, "proto": "MySQL", "first": "06-29 06:52", "last": "06-29 06:52", "risk": "low"}, {"ip": "95.190.214.231", "hits": 2, "proto": "SMB", "first": "06-29 08:36", "last": "06-29 08:36", "risk": "low"}, {"ip": "171.22.248.214", "hits": 2, "proto": "HTTP", "first": "06-29 09:38", "last": "06-29 09:38", "risk": "low"}, {"ip": "35.236.27.63", "hits": 2, "proto": "HTTP", "first": "06-29 10:04", "last": "06-29 10:04", "risk": "low"}, {"ip": "104.253.48.58", "hits": 2, "proto": "HTTP", "first": "06-29 10:49", "last": "06-29 10:49", "risk": "low"}, {"ip": "46.203.210.43", "hits": 2, "proto": "HTTP", "first": "06-29 11:02", "last": "06-29 11:02", "risk": "low"}, {"ip": "146.190.211.22", "hits": 2, "proto": "HTTP", "first": "06-29 11:13", "last": "06-30 01:14", "risk": "low"}, {"ip": "20.64.104.79", "hits": 2, "proto": "MySQL", "first": "06-29 11:32", "last": "06-29 11:32", "risk": "low"}, {"ip": "183.233.145.75", "hits": 2, "proto": "MSSQL", "first": "06-29 12:09", "last": "06-29 12:09", "risk": "low"}, {"ip": "20.84.153.199", "hits": 2, "proto": "EPMAPPER", "first": "06-29 12:22", "last": "06-29 12:22", "risk": "low"}, {"ip": "187.17.224.139", "hits": 2, "proto": "HTTP", "first": "06-29 13:04", "last": "06-29 13:55", "risk": "low"}, {"ip": "45.156.129.133", "hits": 2, "proto": "HTTP", "first": "06-29 13:10", "last": "06-29 14:53", "risk": "low"}, {"ip": "3.143.162.210", "hits": 2, "proto": "HTTP", "first": "06-29 13:12", "last": "06-29 13:15", "risk": "low"}, {"ip": "16.176.125.169", "hits": 2, "proto": "HTTP", "first": "06-29 13:25", "last": "06-29 13:25", "risk": "low"}, {"ip": "185.93.89.154", "hits": 2, "proto": "MSSQL", "first": "06-29 14:03", "last": "06-29 14:03", "risk": "low"}, {"ip": "8.211.166.117", "hits": 2, "proto": "HTTP", "first": "06-29 15:11", "last": "06-29 15:11", "risk": "low"}, {"ip": "82.25.216.52", "hits": 2, "proto": "HTTP", "first": "06-29 15:11", "last": "06-29 15:11", "risk": "low"}, {"ip": "149.57.85.87", "hits": 2, "proto": "HTTP", "first": "06-29 15:34", "last": "06-29 15:34", "risk": "low"}, {"ip": "45.39.4.25", "hits": 2, "proto": "HTTP", "first": "06-29 15:56", "last": "06-29 15:56", "risk": "low"}, {"ip": "221.159.119.6", "hits": 2, "proto": "HTTP", "first": "06-29 17:53", "last": "06-29 17:53", "risk": "low"}, {"ip": "135.237.126.127", "hits": 2, "proto": "MSSQL", "first": "06-29 18:05", "last": "06-29 18:05", "risk": "low"}, {"ip": "82.22.223.228", "hits": 2, "proto": "HTTP", "first": "06-29 18:19", "last": "06-29 18:19", "risk": "low"}, {"ip": "190.60.216.206", "hits": 2, "proto": "SMB", "first": "06-29 18:30", "last": "06-29 18:30", "risk": "low"}, {"ip": "180.173.120.74", "hits": 2, "proto": "MSSQL", "first": "06-29 19:02", "last": "06-29 19:02", "risk": "low"}, {"ip": "47.254.195.133", "hits": 2, "proto": "HTTP", "first": "06-29 20:11", "last": "06-29 20:11", "risk": "low"}, {"ip": "3.125.168.113", "hits": 2, "proto": "HTTP", "first": "06-29 21:13", "last": "06-29 21:13", "risk": "low"}, {"ip": "92.112.238.10", "hits": 2, "proto": "HTTP", "first": "06-29 22:27", "last": "06-29 22:27", "risk": "low"}, {"ip": "31.57.41.151", "hits": 2, "proto": "HTTP", "first": "06-29 22:41", "last": "06-29 22:41", "risk": "low"}, {"ip": "170.130.204.2", "hits": 2, "proto": "HTTP", "first": "06-30 00:11", "last": "06-30 00:11", "risk": "low"}, {"ip": "94.206.65.94", "hits": 2, "proto": "SMB", "first": "06-30 01:27", "last": "06-30 01:27", "risk": "low"}, {"ip": "18.140.44.23", "hits": 2, "proto": "HTTP", "first": "06-30 01:28", "last": "06-30 01:28", "risk": "low"}, {"ip": "184.105.139.67", "hits": 1, "proto": "HTTP", "first": "06-29 01:41", "last": "06-29 01:41", "risk": "low"}, {"ip": "34.176.43.235", "hits": 1, "proto": "HTTP", "first": "06-29 01:43", "last": "06-29 01:43", "risk": "low"}, {"ip": "20.169.49.44", "hits": 1, "proto": "HTTP", "first": "06-29 02:24", "last": "06-29 02:24", "risk": "low"}, {"ip": "52.90.156.83", "hits": 1, "proto": "HTTP", "first": "06-29 02:29", "last": "06-29 02:29", "risk": "low"}, {"ip": "174.129.53.87", "hits": 1, "proto": "HTTP", "first": "06-29 02:34", "last": "06-29 02:34", "risk": "low"}, {"ip": "34.224.167.88", "hits": 1, "proto": "HTTP", "first": "06-29 02:34", "last": "06-29 02:34", "risk": "low"}, {"ip": "3.91.27.173", "hits": 1, "proto": "HTTP", "first": "06-29 02:34", "last": "06-29 02:34", "risk": "low"}, {"ip": "197.153.58.78", "hits": 1, "proto": "MSSQL", "first": "06-29 02:56", "last": "06-29 02:56", "risk": "low"}, {"ip": "136.112.131.130", "hits": 1, "proto": "MSSQL", "first": "06-29 03:16", "last": "06-29 03:16", "risk": "low"}, {"ip": "198.235.24.79", "hits": 1, "proto": "HTTP", "first": "06-29 03:25", "last": "06-29 03:25", "risk": "low"}, {"ip": "64.64.112.144", "hits": 1, "proto": "HTTP", "first": "06-29 03:26", "last": "06-29 03:26", "risk": "low"}, {"ip": "202.61.207.137", "hits": 1, "proto": "HTTP", "first": "06-29 04:40", "last": "06-29 04:40", "risk": "low"}, {"ip": "40.124.174.199", "hits": 1, "proto": "HTTP", "first": "06-29 04:54", "last": "06-29 04:54", "risk": "low"}, {"ip": "198.235.24.161", "hits": 1, "proto": "HTTP", "first": "06-29 05:05", "last": "06-29 05:05", "risk": "low"}, {"ip": "51.159.71.139", "hits": 1, "proto": "HTTP", "first": "06-29 05:36", "last": "06-29 05:36", "risk": "low"}, {"ip": "98.89.204.118", "hits": 1, "proto": "MySQL", "first": "06-29 07:17", "last": "06-29 07:17", "risk": "low"}, {"ip": "113.200.76.11", "hits": 1, "proto": "MSSQL", "first": "06-29 08:19", "last": "06-29 08:19", "risk": "low"}, {"ip": "222.89.169.98", "hits": 1, "proto": "HTTP", "first": "06-29 08:32", "last": "06-29 08:32", "risk": "low"}, {"ip": "136.107.16.139", "hits": 1, "proto": "HTTP", "first": "06-29 08:41", "last": "06-29 08:41", "risk": "low"}, {"ip": "3.24.212.254", "hits": 1, "proto": "HTTP", "first": "06-29 08:52", "last": "06-29 08:52", "risk": "low"}, {"ip": "50.112.206.226", "hits": 1, "proto": "HTTP", "first": "06-29 09:33", "last": "06-29 09:33", "risk": "low"}, {"ip": "94.154.43.140", "hits": 1, "proto": "HTTP", "first": "06-29 09:48", "last": "06-29 09:48", "risk": "low"}, {"ip": "20.106.32.192", "hits": 1, "proto": "HTTP", "first": "06-29 09:49", "last": "06-29 09:49", "risk": "low"}, {"ip": "45.144.212.92", "hits": 1, "proto": "HTTP", "first": "06-29 10:01", "last": "06-29 10:01", "risk": "low"}, {"ip": "18.218.118.203", "hits": 1, "proto": "HTTP", "first": "06-29 11:53", "last": "06-29 11:53", "risk": "low"}, {"ip": "104.248.160.105", "hits": 1, "proto": "HTTP", "first": "06-29 12:19", "last": "06-29 12:19", "risk": "low"}, {"ip": "212.127.90.201", "hits": 1, "proto": "HTTP", "first": "06-29 12:45", "last": "06-29 12:45", "risk": "low"}, {"ip": "20.64.104.155", "hits": 1, "proto": "MSSQL", "first": "06-29 12:52", "last": "06-29 12:52", "risk": "low"}, {"ip": "45.156.129.46", "hits": 1, "proto": "HTTP", "first": "06-29 13:10", "last": "06-29 13:10", "risk": "low"}, {"ip": "66.132.195.71", "hits": 1, "proto": "MySQL", "first": "06-29 14:30", "last": "06-29 14:30", "risk": "low"}, {"ip": "43.153.99.164", "hits": 1, "proto": "HTTP", "first": "06-29 14:44", "last": "06-29 14:44", "risk": "low"}, {"ip": "43.166.226.57", "hits": 1, "proto": "HTTP", "first": "06-29 14:47", "last": "06-29 14:47", "risk": "low"}, {"ip": "190.25.75.206", "hits": 1, "proto": "MSSQL", "first": "06-29 15:05", "last": "06-29 15:05", "risk": "low"}, {"ip": "123.59.4.98", "hits": 1, "proto": "MSSQL", "first": "06-29 15:37", "last": "06-29 15:37", "risk": "low"}, {"ip": "115.191.32.57", "hits": 1, "proto": "HTTP", "first": "06-29 16:05", "last": "06-29 16:05", "risk": "low"}, {"ip": "41.65.74.21", "hits": 1, "proto": "MSSQL", "first": "06-29 16:20", "last": "06-29 16:20", "risk": "low"}, {"ip": "66.132.172.101", "hits": 1, "proto": "EPMAPPER", "first": "06-29 16:34", "last": "06-29 16:34", "risk": "low"}, {"ip": "194.187.178.195", "hits": 1, "proto": "MSSQL", "first": "06-29 16:38", "last": "06-29 16:38", "risk": "low"}, {"ip": "40.124.175.225", "hits": 1, "proto": "HTTP", "first": "06-29 16:55", "last": "06-29 16:55", "risk": "low"}, {"ip": "43.164.192.151", "hits": 1, "proto": "HTTP", "first": "06-29 16:56", "last": "06-29 16:56", "risk": "low"}, {"ip": "44.201.166.172", "hits": 1, "proto": "HTTP", "first": "06-29 17:30", "last": "06-29 17:30", "risk": "low"}, {"ip": "54.234.183.96", "hits": 1, "proto": "HTTP", "first": "06-29 17:30", "last": "06-29 17:30", "risk": "low"}, {"ip": "54.208.20.108", "hits": 1, "proto": "HTTP", "first": "06-29 17:31", "last": "06-29 17:31", "risk": "low"}, {"ip": "18.208.115.35", "hits": 1, "proto": "HTTP", "first": "06-29 17:31", "last": "06-29 17:31", "risk": "low"}, {"ip": "89.111.143.19", "hits": 1, "proto": "HTTP", "first": "06-29 17:37", "last": "06-29 17:37", "risk": "low"}, {"ip": "170.106.140.110", "hits": 1, "proto": "HTTP", "first": "06-29 18:52", "last": "06-29 18:52", "risk": "low"}, {"ip": "111.7.96.177", "hits": 1, "proto": "HTTP", "first": "06-29 20:28", "last": "06-29 20:28", "risk": "low"}, {"ip": "66.132.186.203", "hits": 1, "proto": "MSSQL", "first": "06-29 20:34", "last": "06-29 20:34", "risk": "low"}, {"ip": "52.26.160.69", "hits": 1, "proto": "MSSQL", "first": "06-29 20:59", "last": "06-29 20:59", "risk": "low"}, {"ip": "91.230.168.12", "hits": 1, "proto": "MySQL", "first": "06-29 21:28", "last": "06-29 21:28", "risk": "low"}, {"ip": "91.230.168.10", "hits": 1, "proto": "MySQL", "first": "06-29 21:28", "last": "06-29 21:28", "risk": "low"}, {"ip": "91.230.168.8", "hits": 1, "proto": "MySQL", "first": "06-29 21:28", "last": "06-29 21:28", "risk": "low"}, {"ip": "91.230.168.4", "hits": 1, "proto": "MySQL", "first": "06-29 21:28", "last": "06-29 21:28", "risk": "low"}, {"ip": "198.235.24.155", "hits": 1, "proto": "HTTP", "first": "06-29 21:30", "last": "06-29 21:30", "risk": "low"}, {"ip": "135.119.112.96", "hits": 1, "proto": "HTTP", "first": "06-29 21:31", "last": "06-29 21:31", "risk": "low"}, {"ip": "198.235.24.149", "hits": 1, "proto": "HTTP", "first": "06-29 21:43", "last": "06-29 21:43", "risk": "low"}, {"ip": "43.166.142.76", "hits": 1, "proto": "HTTP", "first": "06-29 21:51", "last": "06-29 21:51", "risk": "low"}, {"ip": "138.124.73.150", "hits": 1, "proto": "HTTP", "first": "06-29 22:05", "last": "06-29 22:05", "risk": "low"}, {"ip": "43.156.36.169", "hits": 1, "proto": "HTTP", "first": "06-29 23:46", "last": "06-29 23:46", "risk": "low"}, {"ip": "185.247.137.79", "hits": 1, "proto": "EPMAPPER", "first": "06-29 23:50", "last": "06-29 23:50", "risk": "low"}, {"ip": "64.62.156.161", "hits": 1, "proto": "HTTP", "first": "06-30 00:25", "last": "06-30 00:25", "risk": "low"}, {"ip": "64.62.156.160", "hits": 1, "proto": "HTTP", "first": "06-30 00:27", "last": "06-30 00:27", "risk": "low"}, {"ip": "20.163.60.170", "hits": 1, "proto": "HTTP", "first": "06-30 00:49", "last": "06-30 00:49", "risk": "low"}], "highfreq": [{"ip": "61.230.73.98", "hits": 1330, "proto": "SMB", "first": "06-29 04:55", "last": "06-29 05:09", "risk": "high"}, {"ip": "207.96.149.127", "hits": 973, "proto": "SMB", "first": "06-29 19:18", "last": "06-29 19:20", "risk": "high"}, {"ip": "203.160.163.197", "hits": 888, "proto": "SMB", "first": "06-29 08:43", "last": "06-29 08:59", "risk": "high"}, {"ip": "20.215.210.222", "hits": 272, "proto": "HTTP", "first": "06-29 11:52", "last": "06-29 12:28", "risk": "high"}, {"ip": "52.231.68.47", "hits": 100, "proto": "HTTP", "first": "06-29 13:18", "last": "06-29 13:26", "risk": "high"}, {"ip": "141.76.94.28", "hits": 92, "proto": "HTTP", "first": "06-29 02:46", "last": "06-30 00:52", "risk": "high"}, {"ip": "170.0.34.95", "hits": 61, "proto": "MySQL", "first": "06-29 02:05", "last": "06-29 02:10", "risk": "high"}, {"ip": "80.94.95.211", "hits": 29, "proto": "HTTP", "first": "06-29 09:12", "last": "06-29 09:12", "risk": "med"}, {"ip": "60.168.97.245", "hits": 12, "proto": "MSSQL", "first": "06-29 21:24", "last": "06-29 21:24", "risk": "med"}, {"ip": "3.129.187.38", "hits": 9, "proto": "MSSQL", "first": "06-29 18:01", "last": "06-29 18:38", "risk": "low"}, {"ip": "103.101.233.18", "hits": 7, "proto": "SMB", "first": "06-29 18:08", "last": "06-29 18:15", "risk": "low"}, {"ip": "59.36.162.153", "hits": 7, "proto": "MySQL", "first": "06-29 22:55", "last": "06-29 22:55", "risk": "low"}, {"ip": "66.132.195.33", "hits": 6, "proto": "HTTP", "first": "06-29 05:56", "last": "06-29 05:58", "risk": "low"}, {"ip": "3.132.26.232", "hits": 6, "proto": "SMB", "first": "06-29 07:23", "last": "06-29 07:28", "risk": "low"}, {"ip": "66.132.195.105", "hits": 6, "proto": "HTTP", "first": "06-29 11:49", "last": "06-29 11:49", "risk": "low"}, {"ip": "3.131.220.121", "hits": 6, "proto": "HTTP", "first": "06-29 18:50", "last": "06-29 18:53", "risk": "low"}, {"ip": "184.105.139.68", "hits": 5, "proto": "HTTP", "first": "06-29 03:25", "last": "06-29 04:00", "risk": "low"}, {"ip": "18.189.28.87", "hits": 5, "proto": "EPMAPPER", "first": "06-29 13:22", "last": "06-29 13:22", "risk": "low"}, {"ip": "209.141.9.242", "hits": 5, "proto": "SMB", "first": "06-29 23:33", "last": "06-29 23:36", "risk": "low"}], "scanners": [{"ip": "61.230.73.98", "hits": 1330, "proto": "SMB", "first": "06-29 04:55", "last": "06-29 05:09", "risk": "high"}, {"ip": "207.96.149.127", "hits": 973, "proto": "SMB", "first": "06-29 19:18", "last": "06-29 19:20", "risk": "high"}, {"ip": "203.160.163.197", "hits": 888, "proto": "SMB", "first": "06-29 08:43", "last": "06-29 08:59", "risk": "high"}, {"ip": "20.215.210.222", "hits": 272, "proto": "HTTP", "first": "06-29 11:52", "last": "06-29 12:28", "risk": "high"}, {"ip": "52.231.68.47", "hits": 100, "proto": "HTTP", "first": "06-29 13:18", "last": "06-29 13:26", "risk": "high"}, {"ip": "141.76.94.28", "hits": 92, "proto": "HTTP", "first": "06-29 02:46", "last": "06-30 00:52", "risk": "high"}, {"ip": "170.0.34.95", "hits": 61, "proto": "MySQL", "first": "06-29 02:05", "last": "06-29 02:10", "risk": "high"}]};
 const DRILL_META = {
   unique:   { title: 'Unique attacker IPs' },
   highfreq: { title: 'High-frequency IPs (5+ hits)' },
@@ -499,7 +499,7 @@ document.addEventListener('keydown', function (e) {
 </script>
 
 <script>
-const bars = [{"h": "2026-06-28 03:00", "c": 25}, {"h": "2026-06-28 04:00", "c": 68}, {"h": "2026-06-28 05:00", "c": 78}, {"h": "2026-06-28 06:00", "c": 17}, {"h": "2026-06-28 07:00", "c": 10}, {"h": "2026-06-28 08:00", "c": 36}, {"h": "2026-06-28 09:00", "c": 66}, {"h": "2026-06-28 10:00", "c": 13}, {"h": "2026-06-28 11:00", "c": 11}, {"h": "2026-06-28 12:00", "c": 13}, {"h": "2026-06-28 13:00", "c": 19}, {"h": "2026-06-28 14:00", "c": 28}, {"h": "2026-06-28 15:00", "c": 12}, {"h": "2026-06-28 16:00", "c": 22}, {"h": "2026-06-28 17:00", "c": 8}, {"h": "2026-06-28 18:00", "c": 33}, {"h": "2026-06-28 19:00", "c": 351}, {"h": "2026-06-28 20:00", "c": 15}, {"h": "2026-06-28 21:00", "c": 17}, {"h": "2026-06-28 22:00", "c": 23}, {"h": "2026-06-28 23:00", "c": 24}, {"h": "2026-06-29 00:00", "c": 33}, {"h": "2026-06-29 01:00", "c": 11}, {"h": "2026-06-29 02:00", "c": 69}];
+const bars = [{"h": "2026-06-29 02:00", "c": 90}, {"h": "2026-06-29 03:00", "c": 12}, {"h": "2026-06-29 04:00", "c": 468}, {"h": "2026-06-29 05:00", "c": 884}, {"h": "2026-06-29 06:00", "c": 24}, {"h": "2026-06-29 07:00", "c": 13}, {"h": "2026-06-29 08:00", "c": 902}, {"h": "2026-06-29 09:00", "c": 34}, {"h": "2026-06-29 10:00", "c": 13}, {"h": "2026-06-29 11:00", "c": 151}, {"h": "2026-06-29 12:00", "c": 151}, {"h": "2026-06-29 13:00", "c": 113}, {"h": "2026-06-29 14:00", "c": 14}, {"h": "2026-06-29 15:00", "c": 10}, {"h": "2026-06-29 16:00", "c": 14}, {"h": "2026-06-29 17:00", "c": 7}, {"h": "2026-06-29 18:00", "c": 38}, {"h": "2026-06-29 19:00", "c": 979}, {"h": "2026-06-29 20:00", "c": 13}, {"h": "2026-06-29 21:00", "c": 28}, {"h": "2026-06-29 22:00", "c": 20}, {"h": "2026-06-29 23:00", "c": 12}, {"h": "2026-06-30 00:00", "c": 19}, {"h": "2026-06-30 01:00", "c": 5}];
 const max  = Math.max(...bars.map(b => b.c), 1);
 const tl   = document.getElementById('tl');
 bars.forEach(b => {
