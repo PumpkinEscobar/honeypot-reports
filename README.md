@@ -115,6 +115,7 @@ Two values at the top of `enrich_ips.py` match the environment:
 | Date | Source IP | Activity | Disposition |
 |---|---|---|---|
 | 2026-06-26 | 61.230.69.104 | SMB reconnaissance on TCP/445 | No malware. Assessed as automated scanning (T1595.001). [Report](./smb-recon-61.230.69.104.md) |
+| 2026-07-05 | 192.168.50.207/.7/.93 | Suricata P1: .onion DNS queries to LAN resolver (ET INFO 2014939) | Open. Anomalous clearnet .onion resolution; disposition pending query-name pull before any suppression. [Report](./onion-dns-p1-2014939.md) |
 
 ## Tooling
 
